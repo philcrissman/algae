@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Algae::VERSION
   spec.authors       = ["Phil Crissman"]
   spec.email         = ["philc@tune.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Some algorithms in Ruby}
+  spec.description   = %q{A collection of algorithms in written in Ruby.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
