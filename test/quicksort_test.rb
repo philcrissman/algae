@@ -7,7 +7,6 @@ require 'algae'
 class Algae::QuicksortTest < MiniTest::Test
   def setup
     @list = (1..1000).map{ rand(99) }
-    # @list = (1..10).map{ rand(99) }
     @sorted = @list.sort
     @qs = Algae::Quicksort.new(@list)
   end
