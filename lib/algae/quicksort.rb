@@ -1,46 +1,46 @@
 module Algae
   class Quicksort
 
-    attr_accessor :array, :last
+    attr_accessor :list, :last
 
-    def initialize array
-      @array = array
-      @last = array.size-1
+    def initialize list
+      @list = list.dup
+      @last = list.size-1
     end
 
     def sort(start=0,finish=last)
       return if start >= finish # return if only one element
-      pivot = @array[start]
+      pivot = @list[start]
       lo, hi = start, finish
 
       while true
-        while @array[hi] >= pivot
+        while @list[hi] >= pivot
           hi -= 1
           break if hi <= lo
         end
         if hi <= lo
-          @array[lo] = pivot
+          @list[lo] = pivot
           break
         end
-        @array[lo] = @array[hi]
+        @list[lo] = @list[hi]
 
         lo += 1
-        while @array[lo] < pivot
+        while @list[lo] < pivot
           lo += 1
           break if lo >= hi
         end
         if lo >= hi
           lo = hi
-          @array[hi] = pivot
+          @list[hi] = pivot
           break
         end
-        @array[hi] = @array[lo]
+        @list[hi] = @list[lo]
       end
 
       sort(start,lo - 1)
       sort(lo + 1, finish)
 
-      @array
+      @list
     end
   end
 end

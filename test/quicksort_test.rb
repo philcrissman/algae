@@ -1,8 +1,4 @@
-require 'minitest/autorun'
-require 'pry'
-require 'pry-debugger'
-
-require 'algae'
+require_relative './test_helper.rb'
 
 class Algae::QuicksortTest < MiniTest::Test
   def setup

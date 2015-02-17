@@ -3,7 +3,7 @@ module Algae
     attr_accessor :list, :size
 
     def initialize list
-      @list = list
+      @list = list.dup
       @size = list.size - 1
     end
 
